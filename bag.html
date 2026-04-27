@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Your Bag - Vora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <header id="header-placeholder"></header> <main class="bag-page">
+        <div class="bag-layout">
+            <div class="bag-left" id="bag-items-container">
+                </div>
+
+            <div class="bag-right">
+                <div class="price-header">PRICE DETAILS</div>
+                <hr>
+                <div id="price-summary">
+                    </div>
+                <button class="btn-place-order" onclick="checkBagAndProceed()">CHECKOUT</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+    <script src="bag.js"></script>
+    <div id="custom-alert" class="custom-alert">
+    <div class="alert-box">
+        <span class="close-btn" onclick="closeAlert()">✖</span>
+        <div class="alert-icon">🛒</div>
+        <h2>Your Cart is Empty!</h2>
+        <p>Add some awesome products before checkout 🚀</p>
+        <button onclick="goToShop()">Continue Shopping</button>
+    </div>
+</div>
+</body>
+</html>

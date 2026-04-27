@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Checkout - Vora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <main class="checkout-page">
+        <div class="checkout-container">
+            <h1 class="checkout-title">SHIPPING DETAILS</h1>
+            <p class="checkout-subtitle">Please fill in your information to finalize the order.</p>
+
+            <form id="checkout-form" class="glass-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="example@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Delivery Address</label>
+                    <textarea rows="3" placeholder="House No, Street, Locality..." required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>City</label>
+                        <input type="text" placeholder="e.g. Mumbai" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Pincode</label>
+                        <input type="number" placeholder="XXXXXX" required>
+                    </div>
+                </div>
+
+                <div class="payment-selection">
+                    <label>Payment Method</label>
+                    <div class="radio-group">
+                        <input type="radio" name="payment" id="cod" checked>
+                        <label for="cod">Cash on Delivery (COD)</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-confirm-order">CONFIRM ORDER</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="cart.js"></script>
+    <script>
+       
+    document.getElementById('checkout-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // 1. Clear all cart data from the browser memory
+        localStorage.removeItem('bag'); 
+        
+        // 2. Clear the variable in memory so icons update
+        if (typeof bag !== 'undefined') {
+            bag = [];
+        }
+
+        // 3. Redirect the user to the SUCCESS page instead of index.html
+        window.location.href = 'success.html'; 
+    });
+</script>
+    </script>
+</body>
+</html>
