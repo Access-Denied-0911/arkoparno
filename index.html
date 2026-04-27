@@ -11,6 +11,11 @@
 <body>
 
     <header>      
+        <div id="splash-screen">
+    <div class="splash-container">
+        <img src="images/vora.png" alt="Vora Logo" class="splash-logo">
+    </div>
+</div>
         <div class="logo_container">
             <a href="#">
                 <img class="logo_home" src="images/vora.png" alt="Vora Home">
@@ -27,11 +32,11 @@
            <a href="#">STUDIO<sup>NEW</sup></a>
         </div>
 
-        <!-- 🔍 SEARCH BAR -->
-        <div class="search_bar">
+       <div class="search_bar">
             <span class="material-symbols-outlined search_icon">search</span>
-            <input class="search_input" placeholder="Search for products, brands and more">
+            <input id="search-input" class="search_input" placeholder="Search for products, brands and more">
         </div>
+         <div id="search-results" class="search-results"></div>
 
         <!-- 🧑 ACTION BAR -->
         <div class="action_bar">
@@ -132,8 +137,10 @@
 </footer>
    <script src="button.js"></script>
    <script src="data.js"></script>
-    <script src="cart.js"></script>
+   <script src="cart.js"></script>
     <script src="product.js"></script>
+    <script src="search.js"></script> 
+
 
 </body>
 </html>
